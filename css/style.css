@@ -1658,7 +1658,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 32px;
   height: 20px;
-  background: url(/img/arrow-right.png) left no-repeat;
+  background: url(../img/arrow-right.png) left no-repeat;
 }
 
 .footer {
