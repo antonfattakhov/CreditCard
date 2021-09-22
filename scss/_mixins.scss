@@ -1,0 +1,15 @@
+@mixin adaptive-value-fromMax-to768($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    #{$property}: $startSize + px;
+    @media screen and (max-width: 1200px) {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 768px) / (1200 - 768)));
+    }
+}
+
+@mixin adaptiveHeight-value-fromMax-to700($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    #{$property}: $startSize + px;
+    @media screen and (max-height: 1160px) {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vh - 700px) / (1160 - 700)));
+    }
+}

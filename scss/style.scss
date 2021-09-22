@@ -1,0 +1,105 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_mixins.scss";
+@import "_header.scss";
+@import "_cards.scss";
+@import "_faq.scss";
+@import "_banking.scss";
+@import "_login.scss";
+@import "_service.scss";
+@import "_footer.scss";
+
+body {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 400;
+    color: black;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+// Стили для секций
+.main {
+    &__wrapper {
+        
+    }
+    &__cards {
+        height: 1160px;
+        overflow: hidden;
+        background: linear-gradient(-18deg, #071d68, #0b4bec) fixed;
+        @media screen and (max-height: 1160px) {
+            height: 100vh;
+        }
+        @media screen and (max-height: 600px) {
+            height: 600px;
+        }
+    }
+    &__faq {
+        background-color: #f3f2f2;
+        padding-top: 160px;
+        padding-bottom: 201px;
+        @include adaptive-value-fromMax-to768(padding-top, 160, 50);
+        @include adaptive-value-fromMax-to768(padding-bottom, 201, 50);
+        @media screen and (max-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &__service {
+        background-color: #ffffff;
+        padding-top: 160px;
+        padding-bottom: 160px;
+        @include adaptive-value-fromMax-to768(padding-top, 160, 50);
+        @include adaptive-value-fromMax-to768(padding-bottom, 160, 50);
+        @media screen and (max-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &__banking {
+        background: url(../img/banking-bg.jpg) no-repeat center;
+        position: relative;
+        padding-top: 171px;
+        padding-bottom: 181px;
+        @include adaptive-value-fromMax-to768(padding-top, 171, 50);
+        @include adaptive-value-fromMax-to768(padding-bottom, 181, 50);
+        @media screen and (max-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-18deg, #071d68, #0b4bec) fixed;
+            opacity: 90%;
+            z-index: 1;
+        }
+        
+    }
+    &__login {
+        background-color: #ffffff;
+        padding-top: 137px;
+        padding-bottom: 148px;
+        @include adaptive-value-fromMax-to768(padding-top, 137, 50);
+        @include adaptive-value-fromMax-to768(padding-bottom, 148, 50);
+        @media screen and (max-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}

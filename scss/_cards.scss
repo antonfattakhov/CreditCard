@@ -1,0 +1,213 @@
+.cards {
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 124px;
+        @media screen and (max-width: 768px) {
+            padding-top: 100px;
+        }
+    }
+    &__text-block {
+        margin: 0 auto;
+        max-width: 950px;
+    }
+    &__title {
+        font-family: 'Poppins';
+        font-style: normal;
+
+        @include adaptive-value-fromMax-to768(font-size, 40, 30);
+        @include adaptive-value-fromMax-to768(line-height, 40, 30);
+        @media screen and (max-width: 768px) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        font-weight: 600;
+        color: #ffffff;
+        text-align: center;
+        @include adaptiveHeight-value-fromMax-to700(margin-bottom, 35, 30);
+        @media screen and (max-height: 700px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__text {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 28px;
+        @include adaptiveHeight-value-fromMax-to700(font-size, 14, 12);
+        @include adaptiveHeight-value-fromMax-to700(line-height, 28, 17);
+        @media screen and (max-height: 700px) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        font-weight: 400;
+        color: #ffffff;
+        text-align: center;
+        // margin-bottom: 56px;
+        @include adaptiveHeight-value-fromMax-to700(margin-bottom, 56, 30);
+        @media screen and (max-height: 700px) {
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+    &__button-wrapper {
+        margin: 0 auto;
+        width: 180px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-bottom: 92px;
+        @include adaptiveHeight-value-fromMax-to700(margin-bottom, 92, 30);
+        @media screen and (max-height: 700px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__button {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        text-transform: unset;
+        color: #0b4bec;
+        font-weight: 500;
+        border-radius: 22px;
+        @media screen and (max-width: 768px) {
+            color: black;
+        }
+        &:hover {
+            color: black;
+        }
+        &:active {
+            opacity: 50%;
+        }
+    }
+    &__block {
+
+    }
+    &__bg-1 {
+        position: absolute;
+        top: 31%;
+        left: -3%;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__bg-2 {
+        position: absolute;
+        top: 43%;
+        left: -8%;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__bg-3 {
+        position: absolute;
+        top: 40%;
+        left: 4%;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__bg-4 {
+        position: absolute;
+        top: 51%;
+        left: 4%;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__bg-5 {
+        position: absolute;
+        top: 20%;
+        right: -60%;
+        opacity: 5%;
+    }
+    &__bg-6 {
+        position: absolute;
+        top: 32%;
+        right: -63%;
+        opacity: 5%;
+    }
+    &__block {
+        position: relative;
+        width: 570px;
+        height: 357px;
+        @include adaptiveHeight-value-fromMax-to700(width, 570, 400);
+        @include adaptiveHeight-value-fromMax-to700(height, 357, 250);
+        @media screen and (max-height: 700px) {
+            width: 400px;
+            height: 250px;
+        }
+        @media screen and (max-width: 500px) {
+            width: auto;
+            height: auto;
+        }
+    }
+    &__item {
+        &_middle {
+            position: absolute;
+            z-index: 3;
+            @media screen and (max-width: 500px) {
+                position: relative;
+                max-width: 400px;
+                height: auto;
+            }
+        }
+        &_left {
+            position: absolute;
+            width: 414px;
+            height: 259px;
+            @include adaptiveHeight-value-fromMax-to700(width, 414, 288);
+            @include adaptiveHeight-value-fromMax-to700(height, 259, 180);
+            @media screen and (max-height: 700px) {
+                width: 288px;
+                height: 180px;
+            }
+            top: 15%;
+            left: 0;
+            transform: translateX(-73%);
+            opacity: 50%;
+            z-index: 2;
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+        }
+        &_right {
+            position: absolute;
+            width: 414px;
+            height: 259px;
+            @include adaptiveHeight-value-fromMax-to700(width, 414, 288);
+            @include adaptiveHeight-value-fromMax-to700(height, 259, 180);
+            @media screen and (max-height: 700px) {
+                width: 288px;
+                height: 180px;
+            }
+            top: 15%;
+            right: 0;
+            transform: translateX(73%);
+            opacity: 50%;
+            z-index: 2;
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+        }
+    }
+    &__pic {
+
+    }
+    &__shadow {
+        &_right {
+          opacity: 50%;  
+        }
+        &_left {
+            opacity: 50%;  
+          }
+    }
+}

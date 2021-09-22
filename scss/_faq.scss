@@ -1,0 +1,151 @@
+.faq {
+    &__wrapper {
+    }
+    &__text-block {
+        margin: 0 auto;
+        max-width: 354px;
+        margin-bottom: 100px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+        }
+    }
+    &__top-title {
+        font-family: 'Poppins';
+        font-style: normal;
+
+        @include adaptive-value-fromMax-to768(font-size, 25, 15);
+        @include adaptive-value-fromMax-to768(line-height, 25, 15);
+        @media screen and (max-width: 768px) {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        font-weight: 300;
+        color: #808080;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__main-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        @include adaptive-value-fromMax-to768(font-size, 30, 20);
+        @include adaptive-value-fromMax-to768(line-height, 30, 20);
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        font-weight: 600;
+        color: #000000;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__info {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+.wrapper {
+}
+.info {
+    &__card {
+        max-width: 370px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 49px 39px;
+        @media screen and (max-width: 768px) {
+            padding: 25px 20px;
+        }
+        background-color: #ffffff;
+        flex-basis: 33.3333%;
+        flex-shrink: 1;
+        margin-right: 30px;
+        @media screen and (max-width: 650px) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        transition: all .2s ease;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%) fixed;
+            opacity: 0%;
+            transform: scaleY(1.0);
+            transition: .2s ease;
+            z-index: 1;
+        }
+        &:hover {
+            &::before {
+                opacity: 100%;
+                transform: scaleY(1.25);
+            }
+            .info__title {
+                color: #ffffff;
+            }
+            .info__text {
+                color: #ffffff;
+            }
+        }
+        &_1 {
+        }
+        &_2 {
+        }
+        &_3 {
+            margin-right: 0;
+            @media screen and (max-width: 650px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__pic {
+        margin-bottom: 20px;
+        z-index: 2;
+    }
+    &__img {
+    }
+    &__title {
+        font-family: 'Poppins';
+        font-style: normal;
+        @include adaptive-value-fromMax-to768(font-size, 20, 14);
+        @include adaptive-value-fromMax-to768(line-height, 20, 14);
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+            line-height: 14px;
+        }
+        font-weight: 600;
+        color: #000000;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 29px;
+        transition: .2s ease;
+        z-index: 2;
+    }
+    &__text {
+        font-family: 'Raleway';
+        font-style: normal;
+        @include adaptive-value-fromMax-to768(font-size, 14, 12);
+        @include adaptive-value-fromMax-to768(line-height, 28, 15);
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            line-height: 15px;
+        }
+        font-weight: 400;
+        color: #000000;
+        text-align: center;
+        z-index: 2;
+    }
+}

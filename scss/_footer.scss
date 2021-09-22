@@ -1,0 +1,38 @@
+.footer {
+    padding-top: 41px;
+    padding-bottom: 73px;
+    @media screen and (max-width: 768px) {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    background: url(../img/footer-bg.jpg) no-repeat center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-18deg, #071d68, #0b4bec) fixed;
+        opacity: 90%;
+        z-index: 1;
+    }
+&__wrapper {
+}
+&__text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+&__text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    z-index: 2;
+}
+}
