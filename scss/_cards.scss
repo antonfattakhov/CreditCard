@@ -19,6 +19,7 @@
     &__title {
         font-family: 'Poppins';
         font-style: normal;
+        margin-top: 100px;
 
         @include adaptive-value-fromMax-to768(font-size, 40, 30);
         @include adaptive-value-fromMax-to768(line-height, 40, 30);
